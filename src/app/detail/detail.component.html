@@ -1,0 +1,29 @@
+<div class="top">
+    <div class="box" *ngFor="let data of datas">
+        <div class="right">
+            <h2>Personal details</h2>
+            <h5>id{{data.id}}</h5>
+            <h5>NAME:-{{data.name}}</h5>
+            <h5>User name{{data.username}}</h5>
+            <h5>Email{{data.emai}}</h5>
+        </div>
+        <div class="center">
+            <h2>Address</h2>
+            <h6>Street:-{{data.address.street}}</h6>
+            <h6>Suite:-{{data.address.suite}}</h6>
+            <h6>City:-{{data.address.city}}</h6>
+            <h6>zipcode:-{{data.address.zipcode}}</h6>
+            <h6>latitude:{{data.address.geo.lat}}</h6>
+            <h6>longitude:-{{data.address.geo.lng}}</h6>
+        </div>
+        <div class="left">
+            <h2>Company Details</h2>
+            <h6>Phone{{data.phone}}</h6>
+            <h6>Website:-{{data.website}}</h6>
+            <h6>Name{{data.company.name}}</h6>
+            <h6>Phone{{data.company.catchPhrase}}</h6>
+            <h6>Phone{{data.company.bs}}</h6>
+        </div>
+    </div>
+</div>
+

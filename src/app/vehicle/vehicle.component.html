@@ -1,0 +1,84 @@
+<div class="p1">
+    <div class="p2">
+       
+        <input type="text" [(ngModel)]="bus" (keyup)="getFilterVehicles()"><br><hr>
+
+
+        <label>Sorting</label>
+        <select [(ngModel)]="ramu">
+            <option>Vehicle</option>
+            <option>id</option>
+        </select>
+        <label>Direction</label>
+        <select [(ngModel)]="somu">
+        <option>asc</option>
+        <option>desc</option>
+        </select>
+        <button (click)="getSortVehicles()">Click to Sort</button><br><hr>
+
+        <label>Select page</label>
+        <select [(ngModel)]="suresh">
+            <option value="">Set of Pages</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+        </select>
+        <label>Page Limit</label>
+        <select [(ngModel)]="ramesh">
+            <option value="">limit</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+        </select>
+        <button (click)="getPageVehicles()">Get Page</button>
+
+        <table class="table" border="1PX black">
+            <thead>
+                <tr>
+                    <th>Vehicle</th>
+                    <th>manufacturer</th>
+                    <th>model</th>
+                    <th>type</th>
+                    <th>fuel</th>
+                    <th>color</th>
+                    <th>image</th>
+                    <th>id</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let vehicle of vehicles">
+                    <td>{{vehicle.Vehicle}}</td>
+                    <td>{{vehicle.manufacturer}}</td>
+                    <td>{{vehicle.model}}</td>
+                    <td>{{vehicle.type}}</td>
+                    <td>{{vehicle.fuel}}</td>
+                    <td>{{vehicle.color}}</td>
+                    <td>
+                        <img src="{{vehicle.image}}" height="30px" width="40px">
+                    </td>
+                    <td>
+                        <button (click)="deleteVehicle(vehicle.id)" class="btn btn-danger">Delete</button>
+                    </td>
+                    <td>{{vehicle.id}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+<main>
+    <header>
+        <nav></nav>
+    </header>
+    <section>
+        <h1>Practice</h1>
+        <br>
+        <select [(ngModel)]="ramu">
+            <option value="">list</option>
+            <option>id</option>
+            <option>fee</option>
+            <option>name</option>
+            <option>city</option>
+            <option>phone</option>
+        </select>
+        <select [(ngModel)]="somu">
+            <option value="">Sort</option>
+            <option>asc</option>
+            <option>desc</option>
+        </select>
+        <button (click)="getSortKing()">Get Result</button>
+        <br>
+        <select [(ngModel)]="ramesh">
+            <option value="">List</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+        <select [(ngModel)]="suresh">
+            <option value="">Pages</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+        <button (click)="getFilterKing()">Get Filter</button>
+        <table  class="table">
+            <thead>
+                <tr>
+                    <th>S.no</th>
+                    <th>id</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Fee</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let king of kings let i=index">
+                <tr>
+                    <td>{{i+1}}</td>
+                    <td>{{king.id}}</td>
+                    <td>{{king.name}}</td>
+                    <td>{{king.city}}</td>
+                    <td>{{king.fee}}</td>
+                    <td>{{king.phone}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</main>

@@ -1,0 +1,21 @@
+input{
+    margin: 10px;
+}
+.parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+     
+}
+button{
+    padding: 10px;
+    margin: 30px;
+    border: none;
+    border-radius: 10px;
+}
+label{
+    width: 100px;
+    margin-left: 30PX;
+}

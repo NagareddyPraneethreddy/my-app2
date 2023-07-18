@@ -1,0 +1,34 @@
+.right{
+    height: 50%;
+    width: 30%;
+}
+.center{
+    height: 50%;
+    width: 30%;
+}
+.left{
+    height: 50%;
+    width: 40%;
+}
+.top{
+    height: 100vh;
+    width: 80vw;
+}
+.box{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    background-color: aliceblue;
+    margin: 10px;
+    justify-content: space-between;
+}
+h2{
+    text-decoration: underline;
+    color: red;
+}
+.box:nth-child(odd){
+    background-color: greenyellow;
+}
+.box:nth-child(even){
+    background-color: aqua;
+}

@@ -1,0 +1,26 @@
+<h1>School</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>accounts</th>
+                <th>available_balance</th>
+                <th>account_number</th>
+                <th>city</th>
+                <th>profie_picture</th>
+                <td>id</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <tr *ngFor="let account of students  ">
+                <td>{{students.account_name}}</td>
+                <td>{{students.available_balance}}</td>
+                <td>{{students.account_number}}</td>
+                <td>{{students.city}}</td>
+                <td>
+                    <img src="{{account.profie_picture}}" height="30px" width="30px" alt="">
+                </td>
+                <td>{{students.id}}</td>
+        </tr>
+    </tbody>
+</table>

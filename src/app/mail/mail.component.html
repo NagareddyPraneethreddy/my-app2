@@ -1,0 +1,18 @@
+<div class="parent">
+    <div class="child"*ngFor="let content of contents">
+        <div class="img">
+            <img src="assets/profile1.png" height="80%" width="80%">
+        </div>
+        <div class="content" [ngStyle]="{'font-weight':content.completed>=true? 100:900}">
+            <p >User{{content.userId}}</p>
+            <p >Title:-{{content.title}}</p>
+            <p >Completed:- {{content.completed}}</p>
+        </div>
+        <div class="end">
+            <h6>12 JUL</h6>
+            <button (click)="deletemail(content.userId)" class="btn btn-danger">Delete</button>
+        </div>
+  
+            
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="parent">
+    <input type="text" [(ngModel)]="term" (keyup)="getFilteredtables()">
+    <label>Column:</label>
+    <select [(ngModel)]="column">
+        <option>id</option>
+        <option>fee</option>
+    </select>
+
+    <label>Order:</label>
+    <select [(ngModel)]="order">
+        <option>asc</option>
+        <option>desc</option>
+    </select>
+
+    <button (click)="getSortedtables()">Result</button>
+
+    <table class="table" border="1px">
+        <thead>
+            <tr>
+                <th>Identity</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>City</th>
+                <th>Fee</th>
+            </tr>
+        </thead>
+        <tbody  *ngFor="let table of tables">
+            <tr>
+                <td>{{table.id}}</td>
+                <td>{{table.name}}</td>
+                <td>{{table.phone}}</td>
+                <td>{{table.city}}</td>
+                <td>{{table.fee}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

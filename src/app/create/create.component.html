@@ -1,0 +1,31 @@
+<main>
+    <div class="parent">
+<form [formGroup]="createForm">
+    <label>Vehicle:</label>
+    <input type="text" formControlName="Vehicle">
+    <br>
+    <label>Manufacturer:</label>
+    <input type="text" formControlName="manufacturer">
+    <br>
+    <label>Model:</label>
+    <input type="text" formControlName="model">
+    <br>
+    <label>Type:</label>
+    <input type="text" formControlName="type">
+    <br>
+    <label>Fuel:</label>
+    <input type="text" formControlName="fuel">
+    <br>
+    <label>Color:</label>
+    <input type="text" formControlName="color">
+    <br>
+    <label>Image:</label>
+    <input type="text" formControlName="image">
+    <br>
+    <label>Id</label>
+    <input type="text" formControlName="id">
+    <br>
+    <button class="btn btn-warning" (click)="submit()">Submit</button>
+</form>
+    </div>
+</main>

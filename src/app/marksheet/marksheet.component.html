@@ -1,0 +1,46 @@
+<div class="parent">
+    <div class="child">
+<input type="text"[(ngModel)]="final"(keypress)="search()" style="border: none; background-color: cornsilk;" placeholder="Enter">
+<br>
+<button style="background-color: blue;color: aliceblue;" (click)="delivery()">Only Free Deliery</button>
+<br>
+<button (click)="high()" style="color: black;background-color: yellow;" >Price High to Low</button>
+<button (click)="low()" style="color: black;background-color: yellow;" >Price High to Low</button>
+<button (click)="top()" style="color: black;background-color: yellow;" >Rating High to Low</button>
+<button (click)="less()" style="color: black;background-color: yellow;" >Price Low to High</button>
+<br>
+<button (click)="fifty()" style="background-color:blueviolet;color: aliceblue;">Apply 50% Discount</button>
+<button (click)="charges()" style="color: white;background-color: blueviolet;">Charges Applicable for delivery</button>
+<br>
+
+<button (click)="total()">Total prices</button>
+<button (click)="cart()">Total cart iteams</button>
+
+
+
+
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>S.NO</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Rating</th>
+            <th>Free Delivery</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let value of values; let i =index">
+            <td>{{i+1}}</td>
+            <td>{{value.name}}</td>
+            <td>{{value.price}}</td>
+            <td>{{value.rating}}</td>
+            <td>{{value.free}}</td>
+            <td><button class="btn btn-danger" (click)="delete(i)" style="width: 100%;">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+    </div>
+</div>
