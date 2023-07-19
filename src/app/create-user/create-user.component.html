@@ -11,7 +11,17 @@
             <label >PhonE:-</label>
             <input type="text" formControlName="phone">
             <label >Email:-</label>
-            <input type="text" formControlName="email"><br>
+            <input type="text" formControlName="email">
+            <div formGroupName="address">
+                <label>House NO:-</label>
+                <input type="text" formControlName="Hno">
+                <label>State:-</label>
+                <input type="text" formControlName="State">
+                <label>Pim Code:-</label>
+                <input type="text" formControlName="pin">
+              
+            </div>
+            <br>
             <button (click)="submit()">Submit</button>
         </form>
     </div>

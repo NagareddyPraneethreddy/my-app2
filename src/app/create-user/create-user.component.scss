@@ -6,7 +6,7 @@
     align-items: center;
 }
 .p1{
-    height: 50%;
+    height: 80%;
     width: 50%;
     background-color: bisque;
     box-shadow: 0px 0px 10px black;
@@ -17,7 +17,6 @@ label{
     margin: 10px;
 }
 input{
-    border-radius: 10px;
     border: none;
 }
 button:hover{
@@ -29,4 +28,9 @@ button{
     border-radius: 10px;
     margin-bottom: 15px;
     background-color: chocolate;
+}
+input:hover{
+    background-color: white;
+    color: blue;
+    cursor: pointer;
 }
