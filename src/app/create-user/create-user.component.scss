@@ -1,36 +1,17 @@
 .parent{
     height: 100%;
     width: 100%;
+    background-color: aliceblue;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .p1{
-    height: 80%;
-    width: 50%;
-    background-color: bisque;
-    box-shadow: 0px 0px 10px black;
-    border-radius: 10px;
+    height: 100%;
+    width: 60%;
+    background-color: aquamarine;
 }
 label{
-    width: 30%;
+    width: 150px;
     margin: 10px;
-}
-input{
-    border: none;
-}
-button:hover{
-    color: chartreuse;
-    background-color: darkgray;
-}
-button{
-    border: none;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    background-color: chocolate;
-}
-input:hover{
-    background-color: white;
-    color: blue;
-    cursor: pointer;
 }

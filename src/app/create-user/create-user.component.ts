@@ -17,7 +17,11 @@ export class CreateUserComponent {
       Hno:new FormControl(),
       State:new FormControl(),
       pin:new FormControl(),
-    })
+    }),
+    type: new FormControl(),
+    busFee:new FormControl(),
+    hostelFee:new FormControl(),
+    
   });
   submit(){
     console.log(this.userForm);

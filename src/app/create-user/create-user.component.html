@@ -1,27 +1,41 @@
-<p>create-user works!</p>
-
 <div class="parent">
     <div class="p1" style="text-align: center; text-decoration: underline;">
-        <h1 style="color: red;">Create  USER</h1>
+        <h1 style="color: red;">Create USER</h1>
         <form [formGroup]="userForm">
-            <label >Name:-</label>
-            <input type="text" formControlName="name">
-            <label >Age:-</label>
-            <input type="text" formControlName="age">
-            <label >PhonE:-</label>
-            <input type="text" formControlName="phone">
-            <label >Email:-</label>
-            <input type="text" formControlName="email">
+            <label>Name:-</label>
+            <input type="text" formControlName="name"><br>
+            <label>Age:-</label>
+            <input type="text" formControlName="age"><br>
+            <label>Phone:-</label>
+            <input type="text" formControlName="phone"><br>
+            <label>Email:-</label>
+            <input type="text" formControlName="email"><br>
+
             <div formGroupName="address">
-                <label>House NO:-</label>
-                <input type="text" formControlName="Hno">
+                <label>House No:-</label>
+                <input type="text" formControlName="Hno"><br>
                 <label>State:-</label>
-                <input type="text" formControlName="State">
-                <label>Pim Code:-</label>
-                <input type="text" formControlName="pin">
-              
+                <input type="text" formControlName="State"><br>
+                <label>Pin Code:-</label>
+                <input type="number" formControlName="pin"><br>
             </div>
-            <br>
+
+            <label>Type</label>
+            <input type="radio" name="type" formControlName="type" value="daySchollar">
+            <label id="c">Day Schollar</label>
+
+            <input type="radio" name="type" formControlName="type" value="Hosteller">
+            <label id="c">Hosteller</label><br>
+
+            <div *ngIf="userForm.get('type')?.value=='daySchollar'">
+                <label>Bus Fee</label>
+                <input type="number" formControlName="busFee"><br>
+            </div>
+            <div *ngIf="userForm.get('type')?.value=='Hosteller'">
+                <label>Hostel Fee</label>
+                <input type="number" formControlName="hostelFee"><br>
+            </div>
+
             <button (click)="submit()">Submit</button>
         </form>
     </div>
