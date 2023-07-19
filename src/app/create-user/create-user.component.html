@@ -39,20 +39,20 @@
                     <input type="number" formControlName="hostelFee"><br>
                 </div>
 
-                <div formArrayName="cards" style="background-color:grey;width: 80%;">
+                <div formArrayName="cards"  >
                     <div *ngFor="let card of cardsFormArray.controls; let i=index">
                         <div formGroupName="{{i}}">
 
-                            <h3>Card {{i}}</h3>
+                            <h3 style="color: brown;">Card {{i+1}}</h3>
 
                             <label>Card Number</label>
-                            <input type="number" formControlName="no" minlength="12" maxlength="12"><br>
+                            <input type="number" formControlName="no" min="12" max="12"><br>
 
                             <label>Expiry</label>
                             <input type="date" formControlName="exp"><br>
 
                             <label>Cvv</label>
-                            <input type="number" formControlName="cvv" required minlength="2" maxlength="3"><br>
+                            <input type="number" formControlName="cvv" required min="3" max="3"><br>
 
                             <button (click)="deletecard(i)" class="btn btn-danger">Delete Card</button>
                         </div>
