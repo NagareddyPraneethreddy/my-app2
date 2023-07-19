@@ -36,6 +36,7 @@ import { PracticeComponent } from './practice/practice.component';
 import { CreateComponent } from './create/create.component';
 import { BankAdminComponent } from './bank-admin/bank-admin.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { ProductformComponent } from './productform/productform.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { CreateUserComponent } from './create-user/create-user.component';
     PracticeComponent,
     CreateComponent,
     BankAdminComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    ProductformComponent
   ],
   imports: [
     BrowserModule,

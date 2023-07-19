@@ -33,6 +33,7 @@ import { CreateComponent } from './create/create.component';
 import { BankAdminComponent } from './bank-admin/bank-admin.component';
 import { authentiactionGuard } from './authentiaction.guard';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { ProductformComponent } from './productform/productform.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -64,7 +65,8 @@ const routes: Routes = [
     {path:'Create',component:CreateComponent},
     {path:'bankadmin',component:BankAdminComponent},
     {path:'create-user',component:CreateUserComponent},
-    {path:'info',component:InfoComponent}
+    {path:'productform',component:ProductformComponent},
+    {path:'info',component:InfoComponent},
   ]},
   {path:'',component:LoginComponent},
   {path:'**',component:PagenotfoundComponent},

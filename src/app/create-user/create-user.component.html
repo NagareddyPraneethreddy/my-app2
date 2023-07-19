@@ -25,10 +25,10 @@
 
                 <label>Type</label>
                 <input type="radio" name="type" formControlName="type" value="daySchollar">
-                <label id="c">Day Schollar</label>
+                <label>Day Schollar</label>
 
                 <input type="radio" name="type" formControlName="type" value="Hosteller">
-                <label id="c">Hosteller</label><br>
+                <label>Hosteller</label><br>
 
                 <div *ngIf="userForm.get('type')?.value=='daySchollar'">
                     <label>Bus Fee</label>
@@ -39,7 +39,7 @@
                     <input type="number" formControlName="hostelFee"><br>
                 </div>
 
-                <div formArrayName="cards"  >
+                <div formArrayName="cards">
                     <div *ngFor="let card of cardsFormArray.controls; let i=index">
                         <div formGroupName="{{i}}">
 

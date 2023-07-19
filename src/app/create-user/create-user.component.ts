@@ -43,4 +43,5 @@ addcard(){
   deletecard(i:number){
     this.cardsFormArray.removeAt(i);
   }
+  
 }

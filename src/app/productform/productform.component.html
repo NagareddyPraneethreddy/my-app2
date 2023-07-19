@@ -1,0 +1,62 @@
+<div class="p1">
+    <div class="p2">
+    <div class="c1">
+        <h1>USER PRODUCT FORM</h1>
+    </div>
+    <div class="c2">
+        <form [formGroup]="productForm">
+            <label for="A">Name:-</label>
+            <input id="A" type="text" formControlName="name"><br>
+            <label for="B">Price:-</label>
+            <input  id="B" type="number" formControlName="price"><br>
+            <label>Color:-</label>
+            <input type="color" formControlName="color"><br>
+
+            <div formGroupName="features">
+                <label>RAM:-</label>
+                <input type="text" formControlName="ram"><br>
+                <label>Battery:-</label>
+                <input type="text" formControlName="battery"><br>
+                <label>Processor:-</label>
+                <input type="text" formControlName="Processor"><br>
+            </div>
+
+            <br>
+            <label>Comments:-</label>
+            <button class="btn btn-secondary" (click)="comments()">+</button>
+            <div formArrayName="comments">
+                <div *ngFor="let comment of commentsFormArray.controls; let i=index ">
+                    <div formGroupName="{{i}}">
+                        <label>Comments</label><br>
+                        <label>Name</label>
+                        <input type="text" formControlName="customer"><br>
+                        <label>Time</label>
+                        <input type="date" formControlName="time"><br>
+                        <label>Message</label>
+                        <input type="textarea" formControlName="message"><br>
+                        <button (click)="delete(i)" class="btn btn-secondary">- Comments</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <label>Payment:-</label>
+            <input type="radio" name="type" formControlName="payment" value="upi">
+            <label>UPI Address</label>
+            <input type="radio" name="type" formControlName="payment" value="net">
+            <label>Net Banking</label><br>
+
+            <div *ngIf="productForm.get('payment')?.value=='upi'">
+                <label>UPI Address</label>
+                <input type="text" formControlName="upi">
+            </div>
+            <div *ngIf="productForm.get('payment')?.value=='net'">
+                <label>Net Banking Id</label>
+                <input type="text" formControlName="net">
+            </div>
+            
+                <button (click)="submit()" class="btn btn-primary" style="margin: 100px;">Submit</button>
+        </form>
+    </div>
+    </div>
+</div>
