@@ -34,6 +34,7 @@ import { BankAdminComponent } from './bank-admin/bank-admin.component';
 import { authentiactionGuard } from './authentiaction.guard';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { ProductformComponent } from './productform/productform.component';
+import { notifyGuard } from './notify.guard';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -62,9 +63,9 @@ const routes: Routes = [
     {path:'detail',component:DetailComponent},
     {path:'details',component:DetailsComponent},
     {path:'practice',component:PracticeComponent},
-    {path:'Create',component:CreateComponent},
+    {path:'Create',component:CreateComponent, canDeactivate:[notifyGuard]},
     {path:'bankadmin',component:BankAdminComponent},
-    {path:'create-user',component:CreateUserComponent},
+    {path:'create-user',component:CreateUserComponent,canDeactivate:[notifyGuard]},
     {path:'productform',component:ProductformComponent},
     {path:'info',component:InfoComponent},
   ]},
