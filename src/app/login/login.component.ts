@@ -20,7 +20,7 @@ export class LoginComponent {
   login() {
     console.log(this.loginForm);
 
-    this.lottu.submit(this.loginForm.value).subscribe(
+    this.lottu.createLogin(this.loginForm.value).subscribe(
       (data: any) => {
         alert("login SucessFull");
         this.router.navigateByUrl('/dashboard');
