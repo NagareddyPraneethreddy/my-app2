@@ -6,21 +6,79 @@
         <div class="h2">
             <form [formGroup]="userForm">
                 <label>Name:-</label>
-                <input type="text" formControlName="name"><br>
+                <input type="text" formControlName="name">
+
+                <!-- <span class="text text-danger" *ngIf="userForm.get('name')?.invalid && userForm .get('name')?.touched">
+                    <p *ngIf="userForm.get('name')?.errors?.['required']">field is required</p>
+                    <p *ngIf="userForm.get('name')?.errors?.['minlength']">Min 4 chars</p>
+                    <p *ngIf="userForm.get('name')?.errors?.['maxlength']">Max 10 chars</p>
+                </span> -->
+
+
+                <!-- <p>touched:{{userForm.get('name')?.touched}}</p>
+                <p>untouched:{{userForm.get('name')?.untouched}}</p>
+
+                <p>dirty:{{userForm.get('name')?.dirty}}</p>
+                <p>pristine:{{userForm.get('name')?.pristine}}</p>
+
+                <p>valid:{{userForm.get('name')?.valid}}</p>
+                <p>invalid:{{userForm.get('name')?.invalid}}</p> -->
+
+                <br>
                 <label>Age:-</label>
-                <input type="text" formControlName="age"><br>
+                <input type="number" formControlName="age">
+
+                <!-- <span class="text text-danger" *ngIf="userForm.get('age')?.invalid && userForm .get('age')?.touched">
+                    <p *ngIf="userForm.get('age')?.errors?.['required']">field is required</p>
+                    <p *ngIf="userForm.get('age')?.errors?.['min']">Min 10 age</p>
+                    <p *ngIf="userForm.get('age')?.errors?.['max']">Max 24  age</p>
+                </span> -->
+
+                <br>
                 <label>Phone:-</label>
-                <input type="text" formControlName="phone"><br>
+                <input type="number" formControlName="phone">
+
+                <!-- <span class="text text-danger" *ngIf="userForm.get('phone')?.invalid && userForm .get('phone')?.touched">
+                    <p *ngIf="userForm.get('phone')?.errors?.['required']">field is required</p>
+                    <p *ngIf="userForm.get('phone')?.errors?.['min']">Min 10 phone</p>
+                    <p *ngIf="userForm.get('phone')?.errors?.['max']">Max 24  phone</p>
+                </span> -->
+
+                <br>
                 <label>Email:-</label>
-                <input type="text" formControlName="email"><br>
+                <input type="text" formControlName="email">
+
+                <!-- <span *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched">
+                    <p *ngIf="userForm.get('email')?.errors?.['required']">Field required</p>
+                    <p *ngIf="userForm.get('email')?.errors?.['email']">email missing</p>
+                </span> -->
+                
+                <br>
 
                 <div formGroupName="address">
                     <label>House No:-</label>
                     <input type="text" formControlName="Hno"><br>
+
                     <label>State:-</label>
                     <input type="text" formControlName="State"><br>
+
+                    <!-- <span *ngIf="userForm.get('address')?.get('state')?.invalid && userForm.get('address')?.get('state')?.touched">
+                        <p *ngIf="userForm.get('address')?.get('state')?.errors?.['required']">Address </p>
+                        <p *ngIf="userForm.get('address')?.get('stat')?.errors?.['minlength']">Min char required</p>
+                        <p *ngIf="userForm.get('address')?.get('state')?.errors?.['maxlength']">Max char requird</p>
+                    </span> -->
+
+
                     <label>Pin Code:-</label>
-                    <input type="number" formControlName="pin"><br>
+                    <input type="number" formControlName="pin">
+                    
+                    <!-- <span *ngIf="userForm.get('address')?.get('pin')?.invalid && userForm.get('address')?.get('pin')?.touched">
+                        <p *ngIf="userForm.get('address')?.get('pin')?.errors?.['required']">Required Pin Number</p>
+                        <p *ngIf="userForm.get('address')?.get('pin')?.errors?.['min']">Min lenghth required</p>
+                        <p *ngIf="userForm.get('address')?.get('pin')?.errors?.['max']">Max lenghth required</p>
+                    </span> -->
+
+                    <br>
                 </div>
 
                 <label>Type</label>
@@ -46,7 +104,13 @@
                             <h3 style="color: brown;">Card {{i+1}}</h3>
 
                             <label>Card Number</label>
-                            <input type="number" formControlName="no" min="12" max="12"><br>
+                            <input type="number" formControlName="no" min="12" max="12">
+
+                            <!-- <span *ngIf="cardsFormArray.controls[i].get('no')?.invalid && cardsFormArray.controls[i].get('no')?.touched">
+                               <p *ngIf="cardsFormArray.controls[i].get('no')?.errors?.['required']">Enter the details completly</p>
+                            </span>
+                             -->
+                            <br>
 
                             <label>Expiry</label>
                             <input type="date" formControlName="exp"><br>
