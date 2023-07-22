@@ -1,20 +1,22 @@
 <div class="p1">
     <div class="p2">
-       
-        <input type="text" [(ngModel)]="bus" (keyup)="getFilterVehicles()"><br><hr>
+
+        <input type="text" [(ngModel)]="bus" (keyup)="getFilterVehicles()"><br>
+        <hr>
 
 
         <label>Sorting</label>
         <select [(ngModel)]="ramu">
-            <option>Vehicle</option>
+            <option>vehicle</option>
             <option>id</option>
         </select>
         <label>Direction</label>
         <select [(ngModel)]="somu">
-        <option>asc</option>
-        <option>desc</option>
+            <option>asc</option>
+            <option>desc</option>
         </select>
-        <button (click)="getSortVehicles()">Click to Sort</button><br><hr>
+        <button (click)="getSortVehicles()">Click to Sort</button><br>
+        <hr>
 
         <label>Select page</label>
         <select [(ngModel)]="suresh">
@@ -52,6 +54,8 @@
         <table class="table" border="1PX black">
             <thead>
                 <tr>
+                    <th>S.no</th>
+                    <th>id</th>
                     <th>Vehicle</th>
                     <th>manufacturer</th>
                     <th>model</th>
@@ -59,11 +63,13 @@
                     <th>fuel</th>
                     <th>color</th>
                     <th>image</th>
-                    <th>id</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let vehicle of vehicles">
+                <tr *ngFor="let vehicle of vehicles let i=index">
+                    <td>{{i+1}}</td>
+                    <td>{{vehicle.id}}</td>
                     <td>{{vehicle.Vehicle}}</td>
                     <td>{{vehicle.manufacturer}}</td>
                     <td>{{vehicle.model}}</td>
@@ -74,9 +80,10 @@
                         <img src="{{vehicle.image}}" height="30px" width="40px">
                     </td>
                     <td>
+                        <button class="btn btn-info" (click)="edit(vehicle.id)">Edit</button>
                         <button (click)="deleteVehicle(vehicle.id)" class="btn btn-danger">Delete</button>
+                        <button class="btn btn-warning" (click)="view(vehicle.id)">view</button>
                     </td>
-                    <td>{{vehicle.id}}</td>
                 </tr>
             </tbody>
         </table>

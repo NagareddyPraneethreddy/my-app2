@@ -35,6 +35,7 @@ import { authentiactionGuard } from './authentiaction.guard';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { ProductformComponent } from './productform/productform.component';
 import { notifyGuard } from './notify.guard';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -51,6 +52,7 @@ const routes: Routes = [
     {path:'bmi',component:BmiComponent},
     {path:'strucutral-directives',component:StrucutralDirectivesComponent},
     {path:'atrribute-directives',component:AttributeDirectivesComponent},
+    {path:'vehicle-details/:id',component:VehicleDetailsComponent},
     {path:'marksheet',component:MarksheetComponent},
     {path:'vehicle',component:VehicleComponent},
     {path:'bank',component:BankComponent},
@@ -64,6 +66,7 @@ const routes: Routes = [
     {path:'details',component:DetailsComponent},
     {path:'practice',component:PracticeComponent},
     {path:'Create',component:CreateComponent, canDeactivate:[notifyGuard]},
+    {path:'edit-vehicle/:id',component:CreateComponent},
     {path:'bankadmin',component:BankAdminComponent},
     {path:'create-user',component:CreateUserComponent,canDeactivate:[notifyGuard]},
     {path:'productform',component:ProductformComponent},

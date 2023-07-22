@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+  import { Component } from '@angular/core';
 import { VehicleService } from '../vehicle.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-vehicle',
@@ -17,7 +18,7 @@ export class VehicleComponent {
   public ramu:any="";
   public somu:any="";
 
-  constructor(private vehicleService:VehicleService){
+  constructor(private vehicleService:VehicleService, private router:Router){
     this.vehicleService.getVehicles().subscribe(
       (data:any)=>{
         this.vehicles=data;
@@ -74,6 +75,13 @@ export class VehicleComponent {
 
     )
  
+  };
+  view(id:any){
+    this.router.navigateByUrl('/dashboard/vehicle-details/'+id);
+  }
+
+  edit(id:any){
+    this.router.navigateByUrl('/dashboard/edit-vehicle/'+id)
   }
 
 }
