@@ -10,7 +10,7 @@
 
 <h2 *ngFor="let product of products ">{{product.name}}Price is {{product.price}}</h2>
 
-<table border="1">
+<table border="1" class="table table-dark">
     <thead>
         <tr>
             <th>Names</th>
@@ -20,7 +20,7 @@
     <tbody>
         <tr *ngFor="let product of products">
             <td>{{product.name}}</td>
-            <td>{{product.price}}</td>
+            <td>{{product.price | price}}</td>
             
         </tr>
     </tbody>
@@ -32,15 +32,15 @@
             <th>name</th>
             <th>phone</th>
             <th>class</th>
-            <th>marks</th>
+            <th>Percentage</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let value of values">
             <td>{{value.name}}</td>
-            <td>{{value.phone}}</td>
+            <td>{{value.phone |price}}</td>
             <td>{{value.class}}</td>
-            <td>{{value.marks}}</td>
+            <td>{{value.marks|percentage}}</td>
         </tr>
     </tbody>
 </table>

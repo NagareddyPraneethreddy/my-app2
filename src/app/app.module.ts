@@ -38,6 +38,9 @@ import { BankAdminComponent } from './bank-admin/bank-admin.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { ProductformComponent } from './productform/productform.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { PricePipe } from './price.pipe';
+import { PercentagePipe } from './percentage.pipe';
+import { PhonePipe } from './phone.pipe';
 
 @NgModule({
   declarations: [
@@ -74,7 +77,10 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
     BankAdminComponent,
     CreateUserComponent,
     ProductformComponent,
-    VehicleDetailsComponent
+    VehicleDetailsComponent,
+    PricePipe,
+    PercentagePipe,
+    PhonePipe
   ],
   imports: [
     BrowserModule,

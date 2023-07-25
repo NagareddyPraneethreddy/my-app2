@@ -35,7 +35,7 @@
         <tr *ngFor="let value of values; let i =index">
             <td>{{i+1}}</td>
             <td>{{value.name}}</td>
-            <td>{{value.price}}</td>
+            <td>{{value.price |price}}</td>
             <td>{{value.rating}}</td>
             <td>{{value.free}}</td>
             <td><button class="btn btn-danger" (click)="delete(i)" style="width: 100%;">Delete</button></td>
