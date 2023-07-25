@@ -41,6 +41,7 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
 import { PricePipe } from './price.pipe';
 import { PercentagePipe } from './percentage.pipe';
 import { PhonePipe } from './phone.pipe';
+import { ImpDirective } from './imp.directive';
 
 @NgModule({
   declarations: [
@@ -80,7 +81,8 @@ import { PhonePipe } from './phone.pipe';
     VehicleDetailsComponent,
     PricePipe,
     PercentagePipe,
-    PhonePipe
+    PhonePipe,
+    ImpDirective
   ],
   imports: [
     BrowserModule,
