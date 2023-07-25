@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ProductsService } from '../products.service';
+import { Product } from '../product';
 
 @Component({
   selector: 'app-products',
@@ -8,12 +9,12 @@ import { ProductsService } from '../products.service';
 })
 export class ProductsComponent {
 
-  public products:any=[];
+  public products:Product[]=[];
 
   constructor(private productsservice:ProductsService){
     productsservice.getproducts().subscribe(
-      (data:any)=>{
-        this.products=data
+      (data:Product[])=>{
+        this.products=data;
       },
       (err:any)=>{
         alert('table is not loaded')
