@@ -48,10 +48,11 @@
                 <label>Email:-</label>
                 <input type="text" formControlName="email">
 
-                <!-- <span *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched">
+                <span *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched">
                     <p *ngIf="userForm.get('email')?.errors?.['required']">Field required</p>
                     <p *ngIf="userForm.get('email')?.errors?.['email']">email missing</p>
-                </span> -->
+                    <p *ngIf="userForm.get('email')?.errors?.['domainValidator']">Only Capagemini mail should be accepeted</p>
+                </span>
                 
                 <br>
 
