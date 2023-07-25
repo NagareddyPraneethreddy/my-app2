@@ -42,6 +42,7 @@ import { PricePipe } from './price.pipe';
 import { PercentagePipe } from './percentage.pipe';
 import { PhonePipe } from './phone.pipe';
 import { ImpDirective } from './imp.directive';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +83,8 @@ import { ImpDirective } from './imp.directive';
     PricePipe,
     PercentagePipe,
     PhonePipe,
-    ImpDirective
+    ImpDirective,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,

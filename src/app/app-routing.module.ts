@@ -36,6 +36,7 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { ProductformComponent } from './productform/productform.component';
 import { notifyGuard } from './notify.guard';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { ProductsComponent } from './products/products.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -70,6 +71,7 @@ const routes: Routes = [
     {path:'bankadmin',component:BankAdminComponent},
     {path:'create-user',component:CreateUserComponent,canDeactivate:[notifyGuard]},
     {path:'productform',component:ProductformComponent},
+    {path:'products',component:ProductsComponent},
     {path:'info',component:InfoComponent},
   ]},
   {path:'',component:LoginComponent},

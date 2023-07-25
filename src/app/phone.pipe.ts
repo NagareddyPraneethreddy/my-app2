@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class PhonePipe implements PipeTransform {
 
   transform(value: unknown, ...args: unknown[]): unknown {
-    return "(+91)"+ value;
+    return "+91 "+ value;
   }
 
 }
