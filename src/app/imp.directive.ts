@@ -6,7 +6,8 @@ import { Directive, ElementRef } from '@angular/core';
 export class ImpDirective {
 
   constructor(private elementref:ElementRef) {
-    elementref.nativeElement.style.color="red"
+    elementref.nativeElement.style.color="red",
+    elementref.nativeElement.style.backgroundColor="blue"
    }
 
 }
