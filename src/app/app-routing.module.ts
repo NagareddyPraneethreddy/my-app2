@@ -37,6 +37,7 @@ import { ProductformComponent } from './productform/productform.component';
 import { notifyGuard } from './notify.guard';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { ProductsComponent } from './products/products.component';
+import { ParentComponent } from './parent/parent.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -72,6 +73,7 @@ const routes: Routes = [
     {path:'create-user',component:CreateUserComponent,canDeactivate:[notifyGuard]},
     {path:'productform',component:ProductformComponent},
     {path:'products',component:ProductsComponent},
+    {path:'parent',component:ParentComponent},
     {path:'info',component:InfoComponent},
   ]},
   {path:'',component:LoginComponent},
