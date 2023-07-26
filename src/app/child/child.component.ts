@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -10,5 +10,13 @@ export class ChildComponent {
   @Input() public ac:string="";
   @Input() public bc:number=0;
   constructor(){}
+
+  public add:string="";
+  @Output()public bEvent:EventEmitter<any>= new EventEmitter();
+
+  send(){
+    this.bEvent.emit(this.add);
+  }
+
 
 }

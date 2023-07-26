@@ -5,6 +5,9 @@
 
     <input type="number"[(ngModel)]="bp">
 
-    <app-child [ac]="ap" [bc]="bp"></app-child>
+    <p>view:-{{view}}</p>
+
+    <app-child [ac]="ap" [bc]="bp" (bEvent)="catch($event)"></app-child>
+
 
 </div>
