@@ -1,0 +1,17 @@
+<div class="parent">
+    <div class="p1">
+        <div class="t1">
+            <div class="c1">
+                <h3>Mini Caluculator</h3>
+               <label>Value 1:-</label>
+                <input type="number" [(ngModel)]="p"><br>
+                <label>Value 2:-</label>
+                <input type="number" [(ngModel)]="t"><br>
+                <h5>Result :-{{result}} </h5>
+            </div>
+            <div class="c2">
+                <app-bottom [num1]="p" [num2]="t" (view)="results($event)"></app-bottom>
+            </div>
+        </div>
+    </div>
+</div>

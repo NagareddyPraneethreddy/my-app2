@@ -41,6 +41,7 @@ import { ParentComponent } from './parent/parent.component';
 import { IteamComponent } from './iteam/iteam.component';
 import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
+import { TopComponent } from './top/top.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -80,6 +81,7 @@ const routes: Routes = [
     {path:'iteam',component:IteamComponent},
     {path:'nav',component:NavComponent},
     {path:'cart',component:CartComponent},
+    {path:'top',component:TopComponent},
     {path:'info',component:InfoComponent},
   ]},
   {path:'',component:LoginComponent},

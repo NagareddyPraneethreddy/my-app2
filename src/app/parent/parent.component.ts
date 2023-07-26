@@ -9,8 +9,8 @@ export class ParentComponent {
 
   public ap:string="";
   public bp:number=0;
-  public view:string="";
 
+  public view:string="";
   constructor(){}
 
   catch(value:any){

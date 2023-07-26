@@ -48,6 +48,8 @@ import { ChildComponent } from './child/child.component';
 import { IteamComponent } from './iteam/iteam.component';
 import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
+import { TopComponent } from './top/top.component';
+import { BottomComponent } from './bottom/bottom.component';
 
 @NgModule({
   declarations: [
@@ -94,7 +96,9 @@ import { CartComponent } from './cart/cart.component';
     ChildComponent,
     IteamComponent,
     NavComponent,
-    CartComponent
+    CartComponent,
+    TopComponent,
+    BottomComponent
   ],
   imports: [
     BrowserModule,
