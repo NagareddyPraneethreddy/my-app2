@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 export class ChildComponent {
 
   @Input() public ac:string="";
+  @Input() public bc:number=0;
   constructor(){}
 
 }
