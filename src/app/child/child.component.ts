@@ -12,6 +12,7 @@ export class ChildComponent {
   constructor(){}
 
   public add:string="";
+  
   @Output()public bEvent:EventEmitter<any>= new EventEmitter();
 
   send(){
