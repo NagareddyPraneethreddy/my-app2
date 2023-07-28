@@ -15,12 +15,12 @@ export class LoginComponent {
     email: new FormControl(),
     password: new FormControl(),
   })
-  constructor(private lottu: LoginService, private router:Router) { }
+  constructor(private loginService: LoginService, private router:Router) { }
 
   login() {
     console.log(this.loginForm);
 
-    this.lottu.createLogin(this.loginForm.value).subscribe(
+    this.loginService.createLogin(this.loginForm.value).subscribe(
       (data: any) => {
         alert("login SucessFull");
         this.router.navigateByUrl('/dashboard');

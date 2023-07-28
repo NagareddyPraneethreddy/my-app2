@@ -42,6 +42,8 @@ import { IteamComponent } from './iteam/iteam.component';
 import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
 import { TopComponent } from './top/top.component';
+import { CeoComponent } from './about/ceo/ceo.component';
+import { CompanyComponent } from './about/company/company.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -82,6 +84,8 @@ const routes: Routes = [
     {path:'nav',component:NavComponent},
     {path:'cart',component:CartComponent},
     {path:'top',component:TopComponent},
+    {path:'ceo',component:CeoComponent},
+    {path:'company',component:CompanyComponent},
     {path:'info',component:InfoComponent},
   ]},
   {path:'',component:LoginComponent},

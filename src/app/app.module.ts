@@ -50,6 +50,7 @@ import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
 import { TopComponent } from './top/top.component';
 import { BottomComponent } from './bottom/bottom.component';
+import { AboutModule } from './about/about.module';
 
 @NgModule({
   declarations: [
@@ -106,6 +107,7 @@ import { BottomComponent } from './bottom/bottom.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AboutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,6 +13,6 @@ export function stateValidator(control: AbstractControl) {
         return null;
     }
     else {
-        return { 'stateValidator': 'Only Andhrapradesh and Telanga state Accepted' }
+        return { 'stateValidator': 'Only Andhrapradesh and Telangana state Accepted' }
     }
 }
