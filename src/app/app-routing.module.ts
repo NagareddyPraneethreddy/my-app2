@@ -86,6 +86,9 @@ const routes: Routes = [
     {path:'top',component:TopComponent},
     {path:'ceo',component:CeoComponent},
     {path:'company',component:CompanyComponent},
+
+    {path: 'find',
+    loadChildren: () => import("./find/find.module").then(m => m.FindModule)},
     {path:'info',component:InfoComponent},
   ]},
   {path:'',component:LoginComponent},
